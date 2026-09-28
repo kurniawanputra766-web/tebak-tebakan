@@ -12,28 +12,28 @@ color: black;
   }
 
 #benar1{
-   width: 200px;
+   width: 300px;
    background-color: green;
    color: white;
    display: none;
 }
 
 #gagal1{
-   width: 200px;
+   width: 300px;
    background-color: red;
    color: white;
    display: none;
 }
 
 #benar2{
-  width: 200px;
+  width: 300px;
   background-color: green;
   color: white;
   display: none;
 }
 
 #gagal2{
-  width: 200px;
+  width: 300px;
   background-color: red;
   color: white;
   display: none;
@@ -57,4 +57,18 @@ color: black;
  margin: 20px auto;
  transform: translateY(100px);
  text-shadow: -2px 0 0 white;
+}
+
+#benar3{
+ width: 300px;
+ display: none;
+ background-color: green;
+ color: white;
+}
+
+#gagal3{
+ width: 300px;
+ display: none;
+ background-color: red;
+ color: white;
 }

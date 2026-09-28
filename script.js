@@ -16,6 +16,15 @@ const benar2 =
 const gagal2 =
   document.querySelector("#gagal2");
 
+const tombolBenar3 =
+  document.querySelector("#jawaban3");
+const tombolSalah3 =
+  document.querySelectorAll(".salah3");
+const benar3 =
+  document.querySelector("#benar3");
+const salah3 =
+  document.querySelector("#gagal3");
+
 
 
 const tombolNilai =
@@ -24,7 +33,7 @@ const tombolNilai =
 
 let nilai = 0;
 let soalTerjawab= 0;
-const jumlahSoal= 2;
+const jumlahSoal= 3;
   
 jawaban1.onclick = function(){
   nilai += Number(tombolBenar.dataset.nilai);
@@ -32,6 +41,10 @@ jawaban1.onclick = function(){
 
 jawaban2.onclick = function(){
   nilai += Number(tombolBenar2.dataset.nilai);
+};
+
+jawaban3.onclick = function(){
+  nilai += Number(tombolBenar3.dataset.nilai);
 };
 
 
@@ -80,14 +93,30 @@ function() {
 
  tombolSalah2.forEach(function (button) {
    button.addEventListener("click", function(){
-   gagal2.textContent = "SALAH"
-   gagal2.style.display = "block"
+   gagal2.textContent = "SALAH";
+   gagal2.style.display = "block";
 
    matikantombol(tombolBenar2, tombolSalah2);
     
  });
 });
 
+tombolBenar3.addEventListener("click",
+function(){
+  benar3.textContent = "mana ada sapi bisa terbang";
+  benar3.style.display = "block"
+
+  matikantombol(tombolBenar3,tombolSalah3);
+});
+
+tombolSalah3.forEach(function (button) {
+  button.addEventListener("click", function(){
+  gagal3.textContent = "apa? SALAH";
+  gagal3.style.display = "block";
+
+  matikantombol(tombolBenar3, tombolSalah3);
+  });
+});
 
 
 

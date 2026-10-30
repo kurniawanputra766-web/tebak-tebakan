@@ -25,6 +25,15 @@ const benar3 =
 const salah3 =
   document.querySelector("#gagal3");
 
+const tombolBenar4 =
+  document.querySelector("#jawaban4");
+const tombolSalah4 =
+  document.querySelectorAll(".salah4");
+const benar4 =
+  document.querySelector("#benar4");
+const salah4 =
+  document.querySelector("#salah4");
+
 
 
 const tombolNilai =
@@ -33,7 +42,7 @@ const tombolNilai =
 
 let nilai = 0;
 let soalTerjawab= 0;
-const jumlahSoal= 3;
+const jumlahSoal= 4;
   
 jawaban1.onclick = function(){
   nilai += Number(tombolBenar.dataset.nilai);
@@ -47,6 +56,9 @@ jawaban3.onclick = function(){
   nilai += Number(tombolBenar3.dataset.nilai);
 };
 
+jawaban4.onclick = function(){
+  nilai += Number(tombolBenar4.dataset.nilai);
+};
 
 function matikantombol(tombolBenar, tombolSalah) {
 
@@ -66,7 +78,7 @@ function matikantombol(tombolBenar, tombolSalah) {
 
 tombolBenar.addEventListener("click",
 function() {
-  benar.textContent = "selamat kamu benar";
+  benar.textContent = "selamat kamu benar!";
   benar.style.display = "block";
 
   matikantombol(tombolBenar, tombolSalah);
@@ -119,7 +131,22 @@ tombolSalah3.forEach(function (button) {
 });
 
 
+tombolBenar4.addEventListener("click",
+function(){
+  benar4.textContent = "Ya iyalah";
+  benar4.style.display = "block";
 
+  matikantombol(tombolBenar4,tombolSalah4);
+});
+  
+tombolSalah4.forEach(function (button) {
+  button.addEventListener("click", function(){
+  gagal4.textContent = "Dicarilah";
+  gagal4.style.display ="block";
+
+  matikantombol(tombolBenar4, tombolSalah4);
+  });
+});
 
 
 tombolNilai.onclick = function (){

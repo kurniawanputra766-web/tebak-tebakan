@@ -72,3 +72,18 @@ color: black;
  background-color: red;
  color: white;
 }
+
+#benar4{
+  width: 300px;
+  display: none;
+  background-color: green;
+  color: white;
+}
+
+#gagal4{
+  width: 300px;
+  display: none;
+  background-color: red;
+  color: white;
+}
+
